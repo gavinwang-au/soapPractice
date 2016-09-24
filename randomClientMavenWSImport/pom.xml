@@ -13,9 +13,7 @@
 		</dependency>
 	</dependencies>
 
-
 	<build>
-
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
 
@@ -39,12 +37,21 @@
 						</goals>
 					</execution>
 				</executions>
+				<!-- a example of namespace package name mapping. <configuration> <wsdlDirectory>${basedir}/resource</wsdlDirectory> 
+					<wsdlFiles> <wsdlFile>Calculator.wsdl</wsdlFile> </wsdlFiles> <bindingDirectory>${basedir}/resource</bindingDirectory> 
+					<bindingFiles> <bindingFile>wsdlbindings.xml</bindingFile> </bindingFiles> 
+					<packageName>gen.com.service</packageName> <keep>true</keep> <verbose>true</verbose> 
+					<sourceDestDir>${basedir}/src/</sourceDestDir> </configuration> -->
 				<configuration>
-					<wsdlDirectory>${basedir}/resource</wsdlDirectory>
-					<wsdlFiles>
-						<wsdlFile>AWSECommerceService.wsdl</wsdlFile>
-					</wsdlFiles>
-					<packageName>com.raps.code.generate.ws</packageName>
+					<wsdlUrls>
+						<wsdlUrl>
+							http://wsf.cdyne.com/WeatherWS/Weather.asmx?WSDL
+						</wsdlUrl>
+					</wsdlUrls>
+					<bindingDirectory>${basedir}/resource</bindingDirectory>
+					<bindingFiles>
+						<bindingFile>wsdlbindings.xml</bindingFile>
+					</bindingFiles>
 					<keep>true</keep>
 					<verbose>true</verbose>
 					<sourceDestDir>${basedir}/src/</sourceDestDir>

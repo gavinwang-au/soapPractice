@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  a example of namespace package name mapping.
+<jaxws:bindings 
+    xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+	xmlns:jaxws="http://java.sun.com/xml/ns/jaxws" 
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	wsdlLocation="Calculator.wsdl">
+	<jaxws:bindings 
+	    node="wsdl:definitions/wsdl:types/xsd:schema[@targetNamespace='http://Example.org']">
+		<jaxb:schemaBindings>
+			<jaxb:package name="gen.com.mytypes" />
+		</jaxb:schemaBindings>
+	</jaxws:bindings>
+	<jaxws:package name="gen.com.mytypes" />
+</jaxws:bindings>
+-->
+
+<jaxws:bindings 
+    xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+	xmlns:jaxws="http://java.sun.com/xml/ns/jaxws" 
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:s="http://www.w3.org/2001/XMLSchema"
+	wsdlLocation="http://wsf.cdyne.com/WeatherWS/Weather.asmx?WSDL">
+	<jaxws:bindings 
+	    node="wsdl:definitions/wsdl:types/s:schema[@targetNamespace='http://ws.cdyne.com/WeatherWS/']">
+		<jaxb:schemaBindings>
+			<jaxb:package name="gen.com.weatherws" />
+		</jaxb:schemaBindings>
+	</jaxws:bindings>
+	<jaxws:package name="gen.com.weatherws" />
+</jaxws:bindings>
